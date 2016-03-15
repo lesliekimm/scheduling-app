@@ -8,6 +8,9 @@ angular.module('scheduleApp', ['firebase'])
   var ref = new Firebase("https://shining-torch-9201.firebaseio.com/days");  
   var fb = $firebase(ref);
 
+  // sync as object
+  var syncObject = fb.$asObject();
+
   // function to set the default data
   $scope.reset = function() {    
 
